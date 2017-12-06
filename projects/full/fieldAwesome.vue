@@ -3,17 +3,16 @@
 </template>
 
 <script>
-	import VueFormGenerator from "../../src";
+import VueFormGenerator from "../../../src";
 
-	export default {
-		mixins: [ VueFormGenerator.abstractField ]
-	};
-	
+export default {
+	mixins: [VueFormGenerator.abstractField]
+};
 </script>
 
-<style lang="sass" scoped>
-	input {
-		background-color: lighten(blue, 40%) !important;
-		font-weight: bold;
-	}
+<style lang="scss" scoped>
+input {
+	background-color: lighten(blue, 40%) !important;
+	font-weight: bold;
+}
 </style>
