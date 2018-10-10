@@ -1,7 +1,11 @@
 import Vue from "vue";
 
-import VueFormGenerator from "@";
-import { fieldChecklist } from "@/utils/fieldsLoader.js";
+let VueFormGenerator = require("vue-form-generator");
+// Fix between local and exported project
+if (VueFormGenerator.default) {
+	VueFormGenerator = VueFormGenerator.default;
+}
+import { fieldChecklist } from "vue-form-generator/utils/fieldsLoader.js";
 Vue.use(VueFormGenerator, {
 	fields: [fieldChecklist]
 });

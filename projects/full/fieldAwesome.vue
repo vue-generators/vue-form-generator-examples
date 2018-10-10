@@ -9,7 +9,11 @@
 </template>
 
 <script>
-import VueFormGenerator from "@";
+let VueFormGenerator = require("vue-form-generator");
+// Fix between local and exported project
+if (VueFormGenerator.default) {
+	VueFormGenerator = VueFormGenerator.default;
+}
 
 export default {
 	name: "field-awesome",

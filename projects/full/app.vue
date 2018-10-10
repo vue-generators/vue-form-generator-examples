@@ -54,7 +54,11 @@
 <script>
 /* eslint no-console: 0 */
 import Vue from "vue";
-import VueFormGenerator from "@";
+let VueFormGenerator = require("vue-form-generator");
+// Fix between local and exported project
+if (VueFormGenerator.default) {
+	VueFormGenerator = VueFormGenerator.default;
+}
 import DataTable from "./dataTable.vue";
 import Fakerator from "fakerator";
 

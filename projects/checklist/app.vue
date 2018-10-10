@@ -18,7 +18,11 @@
 
 <script>
 /* eslint no-console: 0 */
-import VueFormGenerator from "../../../src/index.js";
+let VueFormGenerator = require("vue-form-generator");
+// Fix between local and exported project
+if (VueFormGenerator.default) {
+	VueFormGenerator = VueFormGenerator.default;
+}
 const validators = VueFormGenerator.validators;
 import mixinUtils from "../../mixins/utils.js";
 

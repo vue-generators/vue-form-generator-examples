@@ -1,7 +1,11 @@
 /* eslint no-console: 0 */
 import fecha from "fecha";
 
-import VueFormGenerator from "@";
+let VueFormGenerator = require("vue-form-generator");
+// Fix between local and exported project
+if (VueFormGenerator.default) {
+	VueFormGenerator = VueFormGenerator.default;
+}
 const validators = VueFormGenerator.validators;
 
 let customAsyncValidator = function(value) {
