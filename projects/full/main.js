@@ -5,7 +5,8 @@ let VueFormGenerator = require("vue-form-generator");
 if (VueFormGenerator.default) {
 	VueFormGenerator = VueFormGenerator.default;
 }
-import {
+
+const {
 	fieldCheckbox,
 	fieldChecklist,
 	fieldInput,
@@ -28,7 +29,8 @@ import {
 	fieldStaticMap,
 	fieldSwitch,
 	fieldVueMultiSelect
-} from "vue-form-generator/utils/fieldsLoader.js";
+} = VueFormGenerator.fieldsLoader;
+
 // Test custom field
 import fieldAwesome from "./fieldAwesome.vue";
 

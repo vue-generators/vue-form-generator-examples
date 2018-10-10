@@ -5,7 +5,9 @@ let VueFormGenerator = require("vue-form-generator");
 if (VueFormGenerator.default) {
 	VueFormGenerator = VueFormGenerator.default;
 }
-import { fieldInput } from "vue-form-generator/utils/fieldsLoader.js";
+
+const { fieldInput } = VueFormGenerator.fieldsLoader;
+
 Vue.use(VueFormGenerator, {
 	fields: [fieldInput]
 });

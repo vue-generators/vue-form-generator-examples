@@ -5,7 +5,9 @@ let VueFormGenerator = require("vue-form-generator");
 if (VueFormGenerator.default) {
 	VueFormGenerator = VueFormGenerator.default;
 }
-import { fieldDateTimePicker } from "vue-form-generator/utils/fieldsLoader.js";
+
+const { fieldDateTimePicker } = VueFormGenerator.fieldsLoader;
+
 Vue.use(VueFormGenerator, {
 	fields: [fieldDateTimePicker]
 });

@@ -5,7 +5,9 @@ let VueFormGenerator = require("vue-form-generator");
 if (VueFormGenerator.default) {
 	VueFormGenerator = VueFormGenerator.default;
 }
-import { fieldVueMultiSelect } from "vue-form-generator/utils/fieldsLoader.js";
+
+const { fieldVueMultiSelect } = VueFormGenerator.fieldsLoader;
+
 Vue.use(VueFormGenerator, {
 	fields: [fieldVueMultiSelect]
 });
